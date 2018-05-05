@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.firstHeader{
+    border: 3px solid rgb(0, 128, 73);
+    height: 20%;
+    margin-left: 0;
+    text-align: justify;
+}
+
+.overLay{
+    height:20%;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.overLay button {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+    }
+
+    .divSupport{
+        margin:10px 0 0 30px;
+    }
+
+    .divSupport span{
+        float: left;
+        margin: 0 0 0 15px;
+    }
+
+    .cite img{
+        height: 45px;
+        border-radius: 50px;
+        vertical-align: middle;
+        float: left;
+    }
+
+
+
