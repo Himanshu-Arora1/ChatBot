@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import ChatBox from './chatBox';
-import ChatBoxSupport from './chatBox_Support';
+import ChatContainer from './Chat_Container';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <ChatBox />
-        <ChatBoxSupport />
+        <ChatContainer />
       </div>
     );
   }

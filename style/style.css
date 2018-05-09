@@ -1,46 +1,25 @@
 *{
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
 
-.firstHeader{
-    border: 3px solid rgb(0, 128, 73);
-    height: 20%;
-    margin-left: 0;
-    text-align: justify;
+body{
+    color:#ffffff;
+}
+.main-div{
+    border:solid 2px black;
+    width:35%;
+    height:600px;
+    margin: 40px 0px 0px 450px;
+    border-radius: 25px;
 }
 
-.overLay{
-    height:20%;
-    margin-left: 10px;
-    padding-left: 10px;
+.chat-header{
+    display: inline-block;
+    float: left;
+    
 }
-
-.overLay button {
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        border: none;
-        cursor:pointer;
-        overflow: hidden;
-        outline:none;
-    }
-
-    .divSupport{
-        margin:10px 0 0 30px;
-    }
-
-    .divSupport span{
-        float: left;
-        margin: 0 0 0 15px;
-    }
-
-    .cite img{
-        height: 45px;
-        border-radius: 50px;
-        vertical-align: middle;
-        float: left;
-    }
-
-
-
+.chat-header h1{
+    display: inline;
+    text-align: center;
+}
