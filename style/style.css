@@ -14,12 +14,16 @@ body{
     border-radius: 25px;
 }
 
-.chat-header{
-    display: inline-block;
-    float: left;
-    
+.chat-header { 
+    display: block;    
 }
-.chat-header h1{
-    display: inline;
+
+.dropdown{
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.chat-header h5{
+    float: left;
     text-align: center;
+    margin: 33px 0 0 130px;
 }
