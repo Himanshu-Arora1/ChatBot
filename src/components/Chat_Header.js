@@ -1,18 +1,99 @@
-import React,{Component} from 'react';
-import {DropdownButton} from 'react-bootstrap';
-import {MenuItem } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Dropdown, DropdownButton, Glyphicon,Button,OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { MenuItem } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 export default class ChatHeader extends Component {
-    render(){
-        return(
-            <div className="chat-header">
-                <DropdownButton title="..."  bsSize="small" className="dropdown">
-                    <MenuItem eventKey="1">Email Transcript</MenuItem>
-                    <MenuItem eventKey="2">Mute</MenuItem>
-                </DropdownButton>
-                <h5> Chat with Us! </h5>
-            </div>
-            
+    render() {
+        return (
+            <div>
+                <Row>
+                    <Col md={12} style={{padding:'20px'}}>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={2} md={2} style={{ padding:0,verticalAlign: 'middle',paddingLeft:'35px'}}>
+                        <Dropdown id="dropdown-custom-1" >
+                            <Dropdown.Toggle noCaret style={{ border:'none' }} bsSize='large'>
+                                <Glyphicon glyph="glyphicon glyphicon-option-horizontal" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu className="super-colors">
+                                <MenuItem eventKey="1">Action</MenuItem>
+                                <MenuItem eventKey="2">Another action</MenuItem>
+                                <MenuItem eventKey="3" active>
+                                    Active Item
+                                </MenuItem>
+                                <MenuItem divider />
+                                <MenuItem eventKey="4">Separated link</MenuItem>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Col>
+
+                    <Col xs={2} md={8} style={{ textAlign: 'center',fontStyle:'bold',verticalAlign: 'middle'  }}>
+                        <h5> <strong> Chat with Us!</strong> </h5>
+                    </Col>
+
+                    <Col xs={2} md={2} style={{ padding: 0,verticalAlign:'middle'}} >
+                        <Dropdown id="dropdown-custom-1" >
+                            <Dropdown.Toggle noCaret style={{ border: 'none' }} bsSize='large'>
+                                <Glyphicon glyph="glyphicon glyphicon-chevron-down" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu className="super-colors">
+                                <MenuItem eventKey="1">Action</MenuItem>
+                                <MenuItem eventKey="2">Another action</MenuItem>
+                                <MenuItem eventKey="3" active>
+                                    Active Item
+                        </MenuItem>
+                                <MenuItem divider />
+                                <MenuItem eventKey="4">Separated link</MenuItem>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Col>
+                    </Row>
+                    <Row>
+                        <Col md={12}>
+                            <hr  />
+                        </Col>
+                    </Row>
+                    <Row>
+                    <Col md={10} style={{paddingBottom:'15px'}}  >
+                        <img src="../../style/1.jpg" className='support-image' />
+                        <h5 style={{ float: 'left', paddingLeft: '10px' }}>
+                            <strong> Himanshu </strong>
+                        </h5>
+                        <br/><br/>
+                        <h5 style={{ float: 'left', paddingLeft: '10px', margin: '0px' }}>Support Hero</h5>
+                    </Col>
+                    
+                    <Col md={1} style={{ padding: 0 }}>
+
+                        <OverlayTrigger
+                            overlay={<Tooltip id='badId'>RateGood</Tooltip>}
+                            placement="top"
+                            delayShow={300}
+                            delayHide={150}
+                        >
+                            <Button bsSize='small' style={{ border: 'none', borderRadius: '50%' }}>
+                                <Glyphicon glyph="glyphicon glyphicon-thumbs-up" />
+                            </Button>
+                        </OverlayTrigger>
+                    </Col>
+
+                    <Col md={1} style={{ padding: 0 }}>
+                        <OverlayTrigger
+                            overlay={<Tooltip id='badId'>Ratebad</Tooltip>}
+                            placement="top"
+                            delayShow={300}
+                            delayHide={150}
+                        >
+                            <Button bsSize='small' style={{ border: 'none', borderRadius: '50%' }}>
+                                <Glyphicon glyph="glyphicon glyphicon-thumbs-down" />
+                            </Button>
+                        </OverlayTrigger>
+                    </Col>
+                </Row>
+        </div>
         )
-     }
+    }
 }
