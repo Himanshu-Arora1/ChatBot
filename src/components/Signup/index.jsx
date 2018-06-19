@@ -1,9 +1,11 @@
 import React,{Component} from 'react';
-import ChatHeader from'./Chatnowcomponents/Chat_Header'
-import SignUpForm from './Chatnowcomponents/sign_up_form'
+
+import ChatHeader from'../chat_header'
+import SignUpForm from './sign_up_form'
 
 export default class SignUp extends Component{
     render(){
+        console.log('indesxx');
         return(
             <div>
                 <ChatHeader />

@@ -3,6 +3,7 @@ import { Dropdown, DropdownButton, Glyphicon,Button,OverlayTrigger, Tooltip } fr
 import { MenuItem } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
+
 export default class ChatHeader extends Component {
     render() {
         return (
@@ -13,7 +14,7 @@ export default class ChatHeader extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={2} md={2} style={{ padding:0,verticalAlign: 'middle',paddingLeft:'35px'}}>
+                    <Col xs={2} md={2} id='header-row2-col1' >
                         <Dropdown id="dropdown-custom-1" >
                             <Dropdown.Toggle noCaret style={{ border:'none' }} bsSize='large'>
                                 <Glyphicon glyph="glyphicon glyphicon-option-horizontal" />
@@ -30,11 +31,11 @@ export default class ChatHeader extends Component {
                         </Dropdown>
                     </Col>
 
-                    <Col xs={2} md={8} style={{ textAlign: 'center',fontStyle:'bold',verticalAlign: 'middle'  }}>
+                    <Col xs={8} md={8} id='header-row2-col2'>
                         <h5> <strong> Chat with Us!</strong> </h5>
                     </Col>
 
-                    <Col xs={2} md={2} style={{ padding: 0,verticalAlign:'middle'}} >
+                    <Col xs={2} md={2} id='header-row2-col3'>
                         <Dropdown id="dropdown-custom-1" >
                             <Dropdown.Toggle noCaret style={{ border: 'none' }} bsSize='large'>
                                 <Glyphicon glyph="glyphicon glyphicon-chevron-down" />
@@ -51,36 +52,37 @@ export default class ChatHeader extends Component {
                         </Dropdown>
                     </Col>
                     </Row>
+
                     <Row>
                         <Col md={12}>
                             <hr  />
                         </Col>
                     </Row>
+
                     <Row>
-                    <Col md={10} style={{paddingBottom:'15px'}}  >
+                    <Col md={8} id='header-row3-col1'  >
                         <img src="../../style/1.jpg" className='support-image' />
-                        <h5 style={{ float: 'left', paddingLeft: '10px' }}>
+                        <h5 >
                             <strong> Himanshu </strong>
                         </h5>
                         <br/><br/>
-                        <h5 style={{ float: 'left', paddingLeft: '10px', margin: '0px' }}>Support Hero</h5>
+                        <h5 style={{ margin: '0px' }}>Support Hero</h5>
                     </Col>
                     
-                    <Col md={1} style={{ padding: 0 }}>
-
+                    <Col md={2} id='header-row3-col2' >
                         <OverlayTrigger
                             overlay={<Tooltip id='badId'>RateGood</Tooltip>}
                             placement="top"
                             delayShow={300}
                             delayHide={150}
                         >
-                            <Button bsSize='small' style={{ border: 'none', borderRadius: '50%' }}>
+                            <Button bsSize='small'>
                                 <Glyphicon glyph="glyphicon glyphicon-thumbs-up" />
                             </Button>
                         </OverlayTrigger>
                     </Col>
 
-                    <Col md={1} style={{ padding: 0 }}>
+                    <Col md={2} id='header-row3-col3' style={{ padding: 0 }}>
                         <OverlayTrigger
                             overlay={<Tooltip id='badId'>Ratebad</Tooltip>}
                             placement="top"

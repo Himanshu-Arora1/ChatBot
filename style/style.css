@@ -56,3 +56,58 @@ body{
     padding-right: 35px;
     padding-top: 10px;
 }
+
+
+/* Newwwwwwwwwwwwwwwwwwwwwwww */
+
+#grid-class{
+    width: 45%;
+    padding-Left: 0;
+     padding-Right: 0;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px 5px rgba(0,0,0,.075);   
+}
+
+#header-row2-col1{
+    padding:0;
+    vertical-Align:middle;
+    padding-Left:35px;
+}
+
+#header-row2-col2{
+    text-Align: center;
+    font-Style:bold;
+    vertical-Align:middle; 
+}
+
+#header-row2-col3{
+    padding:0;
+    vertical-Align:middle;
+}
+
+#header-row3-col1{
+    padding-Bottom:15px
+}
+
+#header-row3-col1 h5{
+    float:left;
+     padding-Left:10px;
+}
+
+#header-row3-col2{
+    padding: 0 ;
+}
+
+#header-row3-col2 button{
+border: none;
+border-Radius: 50%;
+}
+
+#header-row3-col3{
+    padding: 0px ;
+}
+
+#header-row3-col3 button{
+    border: none;
+    border-Radius: 50%;
+    }
