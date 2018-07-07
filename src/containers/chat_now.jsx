@@ -1,42 +1,40 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
-export default class ChatNow extends Component {
-  constructor(props) {
-    super(props);
+import {actionInitiateChat} from '../actions/index.js'
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-    this.state = {
-      value: "false"
-    };
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    this.props.signUpCall(this.state.value);
-  }
+class ChatNow extends Component {
 
   render() {
     return (
       <Row>
-        <Col md={2} />
-        <form onSubmit={this.handleSubmit}>
+        <Col md={2} />      
           <Col xs={4} md={8} style={{ padding: "0", marginBottom: "5px" }}>
-            <Button
-              type="submit"
+          <Button
               bsStyle="primary"
               bsSize="large"
               style={{ padding: "0" }}
               block
+              onClick={this.props.actionInitiateChat}
             >
               Chat Now
             </Button>
           </Col>
-        </form>
       </Row>
     );
   }
 }
+
+function mapStateToProps({signedInState}){
+  return { signedInState };
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({actionInitiateChat},dispatch);
+} 
+export default connect(
+mapStateToProps,mapDispatchToProps
+)(ChatNow); 

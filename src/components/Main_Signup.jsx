@@ -6,8 +6,6 @@ import SignUp from "./Signup/index";
 export default class MainSignUp extends Component {
 
   render() {
-
-    console.log('enter into signup');
     return(
         <div className="chat-container">
           <Grid

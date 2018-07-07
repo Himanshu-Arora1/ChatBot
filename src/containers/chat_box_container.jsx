@@ -1,35 +1,23 @@
 import React, { Component } from "react";
 import { Grid } from "react-bootstrap";
+import { connect } from "react-redux";
 
 import ChatContainer from "./chat_container";
 import MainSignUp from "../components/Main_Signup";
 
-export default class ChatBoxContainer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      signedIn: true, 
-    };
-  }
-
-  signupCallback = signedIn => {
-
-    console.log('signedInValue',signedIn);
-
-    this.setState({
-      signedIn: signedIn
-    });
-  };
-
+class ChatBoxContainer extends Component {
   render() {
-
-    console.log('enter render')
-    console.log('signedin',this.state.signedIn);
-        return(
-            <Grid>
-              {this.state.signedIn ? <ChatContainer signupCallback={this.signupCallback} /> : <MainSignUp />}
-            </Grid>
-        )
+    return (
+      <Grid>
+        {this.props.signedInState ? <ChatContainer /> : <MainSignUp />}
+      </Grid>
+    );
   }
 }
+
+//Anything will return from this function will end up as props in chat box container
+function mapStateToProps({ signedInState }) {
+  return { signedInState };
+}
+
+export default connect(mapStateToProps)(ChatBoxContainer);

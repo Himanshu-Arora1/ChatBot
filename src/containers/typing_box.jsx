@@ -15,20 +15,13 @@ export default class TypingBox extends Component{
     }
 
     handleSubmit(event) {
-        console.log('enter onsubmit:',this.state.value);
-
         event.preventDefault();
 
-
         this.props.userMsg(this.state.value);
-
-        //console.log('after submit');
-        //this.setState({ value: e.target.value });
      }
 
-    handleChange(e) {
-        console.log('Handle State');
-        this.setState({ value: e.target.value });
+    handleChange(e) {   
+            this.setState({ value: e.target.value });
       }
         render(){
             return(
@@ -41,7 +34,7 @@ export default class TypingBox extends Component{
                                 <FormControl
                                     style={{border:'2px solid #6d6666',borderRadius:'15px',width:'102%',height:'80%',fontSize:'130%'}}
                                     type="text"
-                                    value={this.state.value}
+                                    value={this.props.value}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                 />                    
@@ -55,6 +48,5 @@ export default class TypingBox extends Component{
             )
         }
 }
-
 
 

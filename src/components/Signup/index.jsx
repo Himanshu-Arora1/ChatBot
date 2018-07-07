@@ -5,7 +5,6 @@ import SignUpForm from './sign_up_form'
 
 export default class SignUp extends Component{
     render(){
-        console.log('indesxx');
         return(
             <div>
                 <ChatHeader />

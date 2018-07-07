@@ -11,6 +11,8 @@ export default class ChatItem extends Component {
   }
 
   render() {
+
+    console.log('user',this.props.userAllMsgs);
     return (
       <Row style={{ margin: "0" }}>
         <Col md={12}>
@@ -24,7 +26,7 @@ export default class ChatItem extends Component {
         </Col>
 
         <Col md={8} style={{ float: "left" }}>
-          {this.props.chat.map(messages => this.callFunction(messages))}
+          {this.props.chat.map((messages) => this.callFunction(messages))}
         </Col>
       </Row>
     );
